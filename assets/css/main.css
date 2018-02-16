@@ -1,24 +1,41 @@
-body{
-	font-family: 'Lato', sans-serif ;
+body {
+    font-family: 'Lato', sans-serif;
 }
 
-#random{
-  /* BOX MODEL */
-  width: 100%;
-  height: 100vh;
-  border: 1px solid black;
-  
-  /* ENHANCEMENT */
-  background-image: url('../img/city2.jpg');
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;  
+#random {
+    /* BOX MODEL */
+    width: 100%;
+    height: 100vh;
+    border: 1px solid black;
+    /* ENHANCEMENT */
+    background-image: url('../img/city2.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-#temp-container{
-  background-color: rgba(0,0,0,0.8);
-  height: 100vh;
+
+#temp-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100vh;
 }
-canvas{
-  margin:0;
-  padding: 0;
+
+canvas {
+    margin: 0;
+    padding: 0;
+}
+
+.container-icon .s2 .icon-viento {
+    margin-left: 7%;
+}
+
+.container-icon .s2 .icon-temp {
+    margin-left: 1%;
+}
+
+.container-icon .s12 .icon-cloud {
+    margin-left: 5%;
+}
+
+.container-icon .icon-sese {
+    margin-left: 2%;
 }

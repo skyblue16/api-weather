@@ -29,35 +29,41 @@ function showPosition(position) {
       return response.json();
     })
     .then(function(data) {
-      console.log(data);  
+      console.log(data);
       $('#dayAll').append(
       	` <div class="white-text">
       	<h3>Santiago</h3>
-      	<canvas id="ico" width="20" height="20"></canvas>
+      	<canvas id="ico" width="60" height="60"></canvas>
       	<h1>${Math.floor(data.currently.temperature)}°C</h1>
-      	
-      	<table class="center-aling">
+      	<table class="center-aling centered centered">
         <thead>
+        <tr class="centered center-align">
+              <th class="center-align "><i class="fas fa-thermometer-empty"></i></th>
+              <td class="center-align"><i class="fab fa-mixcloud"></i></td>
+              <td class="center-align "><i class="fas fa-tint"></i></td>
+              <td class="center-align "><i class="fas fa-sun"></i></td>
+              <td class="center-align "><i class="fas fa-level-up-alt"></i></td>
+          </tr>
           <tr>
-              <th>Temperatura</th>
-              <td>Viento</td>
-              <td>Humedad</td>
-              <td>Indic Uv</td>
-              <td>Presión</td>
+              <th class="center-align ">Temperatura</th>
+              <td class="center-align ">Viento</td>
+              <td class="center-align ">Humedad</td>
+              <td class="center-align ">Indic Uv</td>
+              <td class="center-align ">Presión</td>
           </tr>
             <tr>
-              <th>${Math.floor(data.currently.temperature)}°</th>
-              <td>${data.currently.windSpeed}</td>
-              <td>${data.currently.windSpeed}</td>
-              <td>${data.currently.uvIndex}</td>
-              <td>${data.currently.pressure}</td>
+              <th class="center-align ">${Math.floor(data.currently.temperature)}<i class="fas fa-thermometer-empty"></i>°</th>
+              <td class="center-align ">${data.currently.windSpeed}</td>
+              <td class="center-align ">${data.currently.windSpeed}</td>
+              <td class="center-align ">${data.currently.uvIndex}</td>
+              <td class="center-align ">${data.currently.pressure}</td>
           </tr>
         </thead>
-       </table> 
+       </table>
        `
       	);
-       const skycons = new Skycons({ 
-        'color': 'white',
+       const skycons = new Skycons({
+        "color": 'white',
       });
       skycons.add("ico", `${data.currently.icon}`);
       skycons.play();
@@ -95,8 +101,8 @@ function showPosition(position) {
                                     <table>
                                     <tbody>
                                     <tr>
-                                    <td><canvas class="" id="${week[i].icon}" width="10" height="10"></canvas> ${day}</td>
-                                    <td><i class="Tiny material-icons" style="font-size: 18px;">arrow_downward</i>
+                                    <td><canvas class="" id="${week[i].icon}" width="15" height="15"></canvas> ${day}</td>
+                                    <td><i class="tiny material-icons" style="font-size: 18px;">arrow_downward</i>
                                     ${Math.floor(week[i].temperatureMin)}°c
                                    <i class="Tiny material-icons" style="font-size: 18px;">arrow_upward</i>
                                     ${Math.floor(week[i].temperatureMax)}°c
